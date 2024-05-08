@@ -1,1 +1,1 @@
-export * from './lib/globals/globals.component';
+export * from './lib/pokedex-routes.enum';
