@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pokedex/http": ["modules/shared/http/src/index.ts"]
+      "@pokemon/globals": ["modules/shared/globals/src/index.ts"],
+      "@pokemon/http": ["modules/shared/http/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
