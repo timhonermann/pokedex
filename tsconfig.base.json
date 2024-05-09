@@ -16,7 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@pokemon/globals": ["modules/shared/globals/src/index.ts"],
-      "@pokemon/http": ["modules/shared/http/src/index.ts"]
+      "@pokemon/http": ["modules/shared/http/src/index.ts"],
+      "@pokemon/pokedex": ["modules/features/pokedex/src/index.ts"],
+      "@pokemon/testing": ["modules/shared/testing/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

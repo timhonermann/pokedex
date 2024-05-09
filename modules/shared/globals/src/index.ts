@@ -1,1 +1,1 @@
-export * from './lib/pokedex-routes.enum';
+export * from './lib/pokemon-routes.enum';

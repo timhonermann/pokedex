@@ -2,9 +2,9 @@
   "name": "http",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "modules/shared/http/src",
-  "prefix": "lib",
+  "prefix": "pkdx",
   "projectType": "library",
-  "tags": ["type:shared"],
+  "tags": ["scope:library", "type:shared"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",

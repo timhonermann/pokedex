@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "pkdx",
   "sourceRoot": "./src",
-  "tags": [],
+  "tags": ["scope:application"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",

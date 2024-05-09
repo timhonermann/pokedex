@@ -1,16 +1,16 @@
 {
-  "name": "globals",
+  "name": "pokedex",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "modules/shared/globals/src",
+  "sourceRoot": "modules/features/pokedex/src",
   "prefix": "pkdx",
   "projectType": "library",
-  "tags": ["scope:library", "type:shared"],
+  "tags": ["scope:library", "type:feature"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "modules/shared/globals/jest.config.ts"
+        "jestConfig": "modules/features/pokedex/jest.config.ts"
       }
     },
     "lint": {

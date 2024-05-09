@@ -1,16 +1,16 @@
 {
-  "name": "globals",
+  "name": "testing",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "modules/shared/globals/src",
-  "prefix": "pkdx",
+  "sourceRoot": "modules/shared/testing/src",
+  "prefix": "lib",
   "projectType": "library",
-  "tags": ["scope:library", "type:shared"],
+  "tags": [],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "modules/shared/globals/jest.config.ts"
+        "jestConfig": "modules/shared/testing/jest.config.ts"
       }
     },
     "lint": {
