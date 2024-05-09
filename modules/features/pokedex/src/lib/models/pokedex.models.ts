@@ -16,5 +16,5 @@ export type Pokemon = {
 
 export type PokemonList = {
   count: number;
-  pokemon: Pokemon[];
+  pokemons: Pokemon[];
 };

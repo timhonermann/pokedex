@@ -30,9 +30,15 @@ describe('PokedexService', () => {
       const offset = 20;
       const limit = 20;
       const url = 'https://pokeapi.co/api/v2/pokemon';
-      const getSpy = jest
-        .spyOn(httpService, 'get')
-        .mockReturnValue(of({} as PokemonResponse));
+      const getSpy = jest.spyOn(httpService, 'get').mockReturnValue(
+        of({
+          results: [
+            {
+              url: 'https://my/url/id/123',
+            },
+          ],
+        } as PokemonResponse)
+      );
       const params = new HttpParams()
         .append('offset', offset)
         .append('limit', limit);
