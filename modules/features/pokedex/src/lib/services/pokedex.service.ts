@@ -4,6 +4,9 @@ import { HttpService } from '@pokemon/http';
 import { map, Observable } from 'rxjs';
 import { PokemonList, PokemonResponse } from '../models/pokedex.models';
 
+const IMAGE_BASE_URL =
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -19,10 +22,15 @@ export class PokedexService {
     return this.httpService.get<PokemonResponse>(url, { params }).pipe(
       map((result: PokemonResponse) => ({
         ...result,
-        pokemons: result.results.map((p) => ({
-          ...p,
-          id: this.extractIdFromUrl(p.url),
-        })),
+        pokemons: result.results.map((p) => {
+          const id = this.extractIdFromUrl(p.url);
+
+          return {
+            ...p,
+            id,
+            imageUrl: `${IMAGE_BASE_URL}/${id}.png`,
+          };
+        }),
       }))
     );
   }

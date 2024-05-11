@@ -11,6 +11,7 @@ export type PokemonResponse = {
 export type Pokemon = {
   id: string;
   name: string;
+  imageUrl: string;
   url: string;
 };
 

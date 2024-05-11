@@ -11,6 +11,7 @@ describe('PokedexReducer', () => {
         {
           id: '1',
           name: 'Foolio',
+          imageUrl: 'https://image.ch/url',
           url: 'https://api.ch/some/url',
         },
       ];

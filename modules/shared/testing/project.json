@@ -4,7 +4,7 @@
   "sourceRoot": "modules/shared/testing/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:library", "type:shared"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
