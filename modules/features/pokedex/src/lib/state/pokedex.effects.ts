@@ -14,7 +14,7 @@ export const loadPokemons$ = createEffect(
     pokedexService = inject(PokedexService)
   ) =>
     actions$.pipe(
-      ofType(PokedexActions.loadPokemons),
+      ofType(PokedexActions.loadPokemons, PokedexActions.loadMorePokemons),
       concatLatestFrom(() => [
         store.select(PokedexSelectors.limit),
         store.select(PokedexSelectors.offset),

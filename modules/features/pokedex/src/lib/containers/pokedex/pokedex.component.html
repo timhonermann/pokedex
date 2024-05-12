@@ -1,4 +1,4 @@
-<div class="pokemon-list-container">
+<div class="pokemon-list-container" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" [scrollWindow]="false" (scrolled)="loadMore()">
   @for (pokemon of pokemons(); track pokemon.id) {
     <pkdx-pokemon [pokemon]="pokemon" />
   }

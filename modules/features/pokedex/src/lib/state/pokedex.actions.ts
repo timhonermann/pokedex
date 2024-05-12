@@ -5,6 +5,7 @@ export const PokedexActions = createActionGroup({
   source: '[Pokedex]',
   events: {
     'Load Pokemons': emptyProps(),
+    'Load More Pokemons': emptyProps(),
     'Load Pokemons Success': props<{ pokemonList: PokemonList }>(),
   },
 });
