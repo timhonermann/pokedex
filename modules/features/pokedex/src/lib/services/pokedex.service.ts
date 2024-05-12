@@ -36,7 +36,9 @@ export class PokedexService {
   }
 
   private extractIdFromUrl(url: string): string {
-    const parts = url.split('/');
+    const parts = url.split('/').filter(Boolean);
+
+    console.log('parts', parts);
 
     return parts[parts.length - 1];
   }

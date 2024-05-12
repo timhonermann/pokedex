@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { ShellLayoutComponent } from '../shell-layout/shell-layout.component';
@@ -9,5 +9,6 @@ import { ShellLayoutComponent } from '../shell-layout/shell-layout.component';
   imports: [ShellLayoutComponent, HeaderComponent, RouterOutlet],
   templateUrl: './shell.component.html',
   styleUrl: './shell.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShellComponent {}

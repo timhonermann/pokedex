@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'pkdx-shell-layout',
@@ -7,5 +7,6 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './shell-layout.component.html',
   styleUrl: './shell-layout.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShellLayoutComponent {}
