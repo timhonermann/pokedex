@@ -31,4 +31,8 @@ export class PokedexComponent implements OnInit {
   loadMore(): void {
     this.store.dispatch(PokedexActions.loadMorePokemons());
   }
+
+  navigateToDetail(id: string): void {
+    this.store.dispatch(PokedexActions.navigateToDetail({ id }))
+  }
 }

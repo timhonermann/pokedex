@@ -7,5 +7,6 @@ export const PokedexActions = createActionGroup({
     'Load Pokemons': emptyProps(),
     'Load More Pokemons': emptyProps(),
     'Load Pokemons Success': props<{ pokemonList: PokemonList }>(),
+    'Navigate To Detail': props<{ id: string }>()
   },
 });

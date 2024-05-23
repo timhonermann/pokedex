@@ -2,10 +2,11 @@ import { inject } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { concatLatestFrom } from '@ngrx/operators';
 import { Store } from '@ngrx/store';
-import { exhaustMap, map } from 'rxjs';
+import { exhaustMap, from, map } from 'rxjs';
 import { PokedexService } from '../services/pokedex.service';
 import { PokedexActions } from './pokedex.actions';
 import { PokedexSelectors } from './pokedex.selectors';
+import { Router } from '@angular/router';
 
 export const loadPokemons$ = createEffect(
   (
@@ -31,3 +32,11 @@ export const loadPokemons$ = createEffect(
     ),
   { functional: true }
 );
+
+export const navigateToDetail$ = createEffect((
+  actions$ = inject(Actions), router = inject(Router)
+) => actions$.pipe(
+  ofType(PokedexActions.navigateToDetail),
+  exhaustMap(({ id }) => from(router.navigate(['pokedex', id])))
+  ), { functional: true, dispatch: false }
+)
